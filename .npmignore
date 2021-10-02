@@ -10,4 +10,4 @@
 config.gypi
 CVS
 npm-debug.log
-!template/.gitignore
+!dist/template/.gitignore
