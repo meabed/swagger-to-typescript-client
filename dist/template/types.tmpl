@@ -1,0 +1,8 @@
+{@client_typings@}
+
+// Declaring window for frontend, since we will be accessing it from Window
+declare global {
+  interface Window {
+    {@project_name_underscored@}_api_url?: string;
+  }
+}

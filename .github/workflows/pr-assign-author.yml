@@ -1,0 +1,23 @@
+name: pr-assign-author
+on:
+  pull_request:
+    types: [opened]
+    branches:
+      - '*'
+      - '**'
+      - '!master'
+      - '!develop'
+      - '!stage'
+      - '!dependabot**'
+
+env:
+  GH_PAT: ${{ secrets.GH_PAT }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  pr-assign-author:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: samspills/assign-pr-to-author@master
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'

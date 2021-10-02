@@ -1,0 +1,17 @@
+name: pr-assign-reviewer
+on:
+  pull_request:
+    types: [assigned, unassigned]
+
+env:
+  GH_PAT: ${{ secrets.GH_PAT }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  pr-assign-reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assignee to Reviewer
+        uses: pullreminders/assignee-to-reviewer-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

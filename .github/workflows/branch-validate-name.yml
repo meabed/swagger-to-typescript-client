@@ -1,0 +1,30 @@
+# https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716#gistcomment-3037288
+name: branch-validate-name
+on:
+  pull_request:
+    types: [opened]
+    branches:
+      - '*'
+      - '**'
+      - '!master'
+      - '!stage'
+      - '!develop'
+      - '!dependabot**'
+
+env:
+  GH_PAT: ${{ secrets.GH_PAT }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  branch-validate-name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: deepakputhraya/action-branch-name@master
+        with:
+          # match 2 levels feat/new_tooltip or 3 levels dep/npm_yarn/tslint-1.9
+          # eg: dependabot/npm_and_yarn/prettier-1.19.1
+          regex: '([a-z-_.])+(\/([a-z-0-9-_.])+)+' # Regex the branch should match. This example enforces grouping e.g. docs/readme
+          allowed_prefixes: 'feat,fix,docs,style,refactor,test,chore,dependabot' # All branches should start with the given prefix
+          ignore: master,develop,stage # Ignore exactly matching branch names from convention
+          min_length: 5 # Min length of the branch name
+          max_length: 140 # Max length of the branch name

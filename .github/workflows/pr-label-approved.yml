@@ -1,0 +1,18 @@
+name: pr-label-approved
+on: pull_request_review
+
+env:
+  GH_PAT: ${{ secrets.GH_PAT }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  pr-label-approved:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label when approved
+        uses: pullreminders/label-when-approved-action@master
+        env:
+          APPROVALS: '2'
+          ADD_LABEL: 'Status: approved'
+          REMOVE_LABEL: 'Status: Review Needed'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

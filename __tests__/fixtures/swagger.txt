@@ -1,0 +1,182 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Module-Swagger-Sdk-Generator API",
+    "description": "Module swagger generator for modules",
+    "version": "0.0.1",
+    "contact": {
+      "name": "websitecom",
+      "url": "https://website.com",
+      "email": "dev@website.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://b2b.localhost/api/module-test",
+      "description": "local_server"
+    },
+    {
+      "url": "https://mytrade.link/api/module-test",
+      "description": "dev_server"
+    },
+    {
+      "url": "https://websitecomstage.com/api/module-test",
+      "description": "stage_server"
+    },
+    {
+      "url": "https://website.com/api/module-test",
+      "description": "prod_server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "test",
+      "description": "Test endpoints"
+    }
+  ],
+  "paths": {
+    "/v1-create-test": {
+      "post": {
+        "tags": [
+          "test"
+        ],
+        "description": "Create test by request params",
+        "operationId": "V1CreateTestAction",
+        "requestBody": {
+          "description": "Create Test",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/V1CreateTestAction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Test detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/V1CreateTestResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/V1ValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "V1AccessTokenHeader": {
+        "name": "x-jwt-token",
+        "in": "header",
+        "description": "Authorization header",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "schemas": {
+      "V1ValidationError": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "default": "400",
+            "description": "For validation errors it will always be 400"
+          },
+          "name": {
+            "type": "string",
+            "description": "Error name, usually it's HTTPError"
+          },
+          "message": {
+            "type": "string",
+            "description": "Text representing the error description"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "msg": {
+                  "type": "string",
+                  "description": "The error message"
+                },
+                "param": {
+                  "type": "string",
+                  "description": "param.name.with.index[0]"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "param value"
+                },
+                "location": {
+                  "type": "string",
+                  "description": "Location of the param that generated this error. It's either body, query, params, cookies or headers."
+                }
+              }
+            }
+          }
+        }
+      },
+      "V1CreateTestAction": {
+        "type": "object",
+        "required": [
+          "rfqId",
+          "buyerId",
+          "buyerCompanyId",
+          "products",
+          "description"
+        ],
+        "properties": {
+          "buyerId": {
+            "type": "string",
+            "description": "Test is sent to user, this is supplier id"
+          },
+          "buyerCompanyId": {
+            "type": "string",
+            "description": "Supplier company Id"
+          }
+        }
+      },
+      "V1CreateTestResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "buyerId": {
+              "type": "string",
+              "description": "Supplier Id"
+            },
+            "buyerCompanyId": {
+              "type": "string",
+              "description": "Supplier company Id"
+            },
+            "supplierId": {
+              "type": "string",
+              "description": "Supplier Id"
+            },
+            "supplierCompanyId": {
+              "type": "string",
+              "description": "Supplier company Id"
+            }
+          }
+        }
+      }
+    }
+  }
+}

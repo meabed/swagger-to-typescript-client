@@ -1,0 +1,1 @@
+- Example build command generator of swagger yarn build:example => output to example dir
