@@ -2,15 +2,15 @@
 
 import ncp from 'ncp';
 import yargs from 'yargs';
-import { promisify } from 'util';
+import {promisify} from 'util';
 import camelCase from 'camelcase';
-import { join, resolve } from 'path';
-import { execSync } from 'child_process';
-import { generateTypesForDocument } from 'openapi-client-axios-typegen';
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
-import { argvToArguments, askArguments } from './src/input';
-import { ARG_NAMES, Server, SwaggerSpec, UserArguments } from './src/types';
-import { replaceInTemplate } from './src/utils';
+import {join, resolve} from 'path';
+import {execSync} from 'child_process';
+import {generateTypesForDocument} from 'openapi-client-axios-typegen';
+import {copyFileSync, mkdirSync, readFileSync, writeFileSync} from 'fs';
+import {argvToArguments, askArguments} from './src/input';
+import {ARG_NAMES, Server, SwaggerSpec, UserArguments} from './src/types';
+import {replaceInTemplate} from './src/utils';
 
 type NCP = (source: string, destination: string, options?: ncp.Options) => Promise<void>;
 const ncpPromisify: NCP = promisify(ncp);
@@ -42,7 +42,6 @@ const staticsDirPath: string = resolve(`${__dirname}/template/static`);
 const sdkTypesTemplatePath: string = resolve(`${__dirname}/template/types.tmpl`);
 const clientMethodTemplatePath: string = resolve(`${__dirname}/template/client-method.tmpl`);
 const clientTemplatePath: string = resolve(`${__dirname}/template/client.tmpl`);
-const gitIgnoreTemplatePath: string = resolve(`${__dirname}/template/.gitignore`);
 const indexTemplatePath: string = resolve(`${__dirname}/template/index.tmpl`);
 
 //////////////////////////////////////////
@@ -99,7 +98,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   //////////////////////////////////////////
 
   // Create the directory for sdk
-  mkdirSync(outputPathSrc, { recursive: true });
+  mkdirSync(outputPathSrc, {recursive: true});
   console.info('✔ Created output path');
 
   // @todo change to node copy
@@ -170,7 +169,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   let prod_server: string = '';
   let prod_path: string = '';
   serversObj.forEach((server: Server): void => {
-    const { pathname, host, protocol } = new URL(server.url);
+    const {pathname, host, protocol} = new URL(server.url);
     const urlLink: string = `${protocol}//${host}`;
     switch (server.description) {
       case 'local_server':
@@ -210,7 +209,11 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
 
   writeFileSync(join(outputPathSrc, `/client.ts`), clientFileCode);
 
-  const gitIgnoreFileCode: string = readFileSync(gitIgnoreTemplatePath).toString('utf8');
+  const gitIgnoreFileCode: string = `node_modules
+.git
+.idea
+.DS_Store
+`;
   writeFileSync(join(outputPathSrc, `/../.gitignore`), gitIgnoreFileCode);
 
   console.info('✔ Create client index file.');
@@ -227,7 +230,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   // Update package.json with correct version and name
   /////////////////////////////////////////////////////////////////////////
   const outputPackageJsonPath: string = join(outputPath, 'package.json');
-  const outputPackageJson: any = JSON.parse(readFileSync(outputPackageJsonPath, { encoding: 'utf8' }));
+  const outputPackageJson: any = JSON.parse(readFileSync(outputPackageJsonPath, {encoding: 'utf8'}));
 
   outputPackageJson.name = publishPkgName;
   outputPackageJson.version = initialVersion || swaggerObj?.info?.version || '0.0.1';

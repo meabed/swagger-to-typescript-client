@@ -40,7 +40,6 @@ const staticsDirPath = (0, path_1.resolve)(`${__dirname}/template/static`);
 const sdkTypesTemplatePath = (0, path_1.resolve)(`${__dirname}/template/types.tmpl`);
 const clientMethodTemplatePath = (0, path_1.resolve)(`${__dirname}/template/client-method.tmpl`);
 const clientTemplatePath = (0, path_1.resolve)(`${__dirname}/template/client.tmpl`);
-const gitIgnoreTemplatePath = (0, path_1.resolve)(`${__dirname}/template/.gitignore`);
 const indexTemplatePath = (0, path_1.resolve)(`${__dirname}/template/index.tmpl`);
 //////////////////////////////////////////
 // Reads the command line arguments
@@ -186,7 +185,11 @@ const isInteractive = argv[types_1.ARG_NAMES.INTERACTIVE];
         '{@method_definitions@}': methodDefinitions.join(',\n\n'),
     });
     (0, fs_1.writeFileSync)((0, path_1.join)(outputPathSrc, `/client.ts`), clientFileCode);
-    const gitIgnoreFileCode = (0, fs_1.readFileSync)(gitIgnoreTemplatePath).toString('utf8');
+    const gitIgnoreFileCode = `node_modules
+.git
+.idea
+.DS_Store
+`;
     (0, fs_1.writeFileSync)((0, path_1.join)(outputPathSrc, `/../.gitignore`), gitIgnoreFileCode);
     console.info('✔ Create client index file.');
     /////////////////////////////////////////////////////////////////////////
