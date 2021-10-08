@@ -25,7 +25,7 @@
     "ncp": "^2.0.0",
     "openapi-client-axios-typegen": "3.14.1",
     "openapi-types": "^9.3.0",
-    "prompts": "2.4.1",
+    "prompts": "2.4.2",
     "rimraf": "3.0.2",
     "swagger-parser": "10.0.3",
     "ts-node": "10.2.1",
