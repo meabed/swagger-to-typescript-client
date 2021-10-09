@@ -25,7 +25,11 @@ const apiMethods: Record<string, [url: string, method?: string]> = {
 {@method_definitions@}
 }
 
-export function {@project_name_camel@}Client(defaultConfig?: IHttpClientConfig): OperationMethods {
+export interface ClientOperationMethods extends OperationMethods {
+  __axiosInstance: AxiosInstance
+}
+
+export function {@project_name_camel@}Client(defaultConfig?: IHttpClientConfig): ClientOperationMethods {
   const axiosInstance = {@project_name_camel@}ClientRaw(defaultConfig);
   return new Proxy(axiosInstance, {
     get: function (target: any, prop: any) {
@@ -46,9 +50,8 @@ export function {@project_name_camel@}Client(defaultConfig?: IHttpClientConfig):
         };
       else return target[prop];
     }
-  }) as OperationMethods;
+  }) as ClientOperationMethods;
 }
-
 
 function {@project_name_camel@}ClientRaw(defaultConfig?: IHttpClientConfig): { axiosRequest: (options: IHttpClientConfig) => Promise<any>, __axiosInstance: AxiosInstance } {
   const isBrowser: boolean = typeof window !== 'undefined' && typeof window.document !== 'undefined';
