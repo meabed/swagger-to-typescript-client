@@ -26,7 +26,8 @@ const apiMethods: Record<string, [url: string, method?: string]> = {
 }
 
 export function {@project_name_camel@}Client(defaultConfig?: IHttpClientConfig): OperationMethods {
-  return new Proxy({@project_name_camel@}ClientRaw(defaultConfig), {
+  const axiosInstance = {@project_name_camel@}ClientRaw(defaultConfig);
+  return new Proxy(axiosInstance, {
     get: function (target: any, prop: any) {
       if (target[prop] === undefined)
         return function (parameters: any, data: any, config: any) {
@@ -49,7 +50,7 @@ export function {@project_name_camel@}Client(defaultConfig?: IHttpClientConfig):
 }
 
 
-function {@project_name_camel@}ClientRaw(defaultConfig?: IHttpClientConfig) {
+function {@project_name_camel@}ClientRaw(defaultConfig?: IHttpClientConfig): { axiosRequest: (options: IHttpClientConfig) => Promise<any>, __axiosInstance: AxiosInstance } {
   const isBrowser: boolean = typeof window !== 'undefined' && typeof window.document !== 'undefined';
   const vEnv: string = defaultConfig?.apiEnv || process.env.API_ENV || 'local';
   const vBaseHost: GenKvType = defaultConfig && defaultConfig.apiBaseHost || {};
@@ -87,6 +88,7 @@ function {@project_name_camel@}ClientRaw(defaultConfig?: IHttpClientConfig) {
   });
 
   return {
+    __axiosInstance: axiosClient,
     axiosRequest: async (options: IHttpClientConfig): Promise<any> => {
       return axiosClient(options);
     }
