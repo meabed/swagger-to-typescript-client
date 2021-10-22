@@ -10,5 +10,5 @@ echo "✔ Compiled SDK files"
 cp "./src/swagger.json" "./dist/swagger.json";
 echo "✔ Copied static assets"
 
-npx ts-node dtsgen.ts
+npx ts-node --transpile-only dtsgen.ts
 echo "✔ Generated type definitions"

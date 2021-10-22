@@ -35,7 +35,7 @@ describe('test', (): void => {
 
   it('should generate sdk', async (): Promise<void> => {
     // todo change .. to __dirname or more absolute path or relative path
-    const cmd: string = `cd ${currentDir} & rm -rf ${outputPath} & ts-node index.ts --pkg ${publishPkgName} --output ${outputPath} --swagger ${swaggerPath}`;
+    const cmd: string = `cd ${currentDir} & rm -rf ${outputPath} & ts-node --transpile-only index.ts --pkg ${publishPkgName} --output ${outputPath} --swagger ${swaggerPath}`;
     expect(await execSync(cmd)).toBeDefined();
   });
   it('should generate sdk with same pkgName', async (): Promise<void> => {
@@ -113,7 +113,7 @@ describe('test', (): void => {
 async function passInvalidParam(swaggerPath: string, outputPath: string, publishPkgName: string): Promise<Buffer | Error> {
   let execOutput: Buffer;
   try {
-    execOutput = execSync(`cd ${currentDir} & rm -rf ${outputPath} & ts-node index.ts --pkg ${publishPkgName} --output ${outputPath} --swagger ${swaggerPath}`);
+    execOutput = execSync(`cd ${currentDir} & rm -rf ${outputPath} & ts-node --transpile-only index.ts --pkg ${publishPkgName} --output ${outputPath} --swagger ${swaggerPath}`);
   } catch (e) {
     execOutput = e;
   }
@@ -123,7 +123,7 @@ async function passInvalidParam(swaggerPath: string, outputPath: string, publish
 async function generateWithSameParam(swaggerPath: string, outputPath: string, publishPkgName: string): Promise<Buffer | Error> {
   let execOutput: Buffer;
   try {
-    execOutput = await execSync(`cd ${currentDir} & ts-node index.ts --pkg ${publishPkgName} --output ${outputPath} --swagger ${swaggerPath}`);
+    execOutput = await execSync(`cd ${currentDir} & ts-node --transpile-only index.ts --pkg ${publishPkgName} --output ${outputPath} --swagger ${swaggerPath}`);
   } catch (e) {
     execOutput = e;
   }
