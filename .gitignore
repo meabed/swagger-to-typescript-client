@@ -217,3 +217,4 @@ yarn.lock
 !/yarn.lock
 
 .idea
+dist

@@ -1,5 +1,5 @@
-import {resolve} from 'path';
-import {readFileSync} from 'fs';
+import { resolve } from 'path';
+import { readFileSync } from 'fs';
 
 const clientMethodTemplatePath: string = resolve(`${__dirname}/../template/client-method.tmpl`);
 const clientTemplatePath: string = resolve(`${__dirname}/../template/client.tmpl`);

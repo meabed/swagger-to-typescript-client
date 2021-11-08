@@ -1,5 +1,5 @@
-import {execSync} from 'child_process';
-import fs, {readFileSync} from 'fs';
+import { execSync } from 'child_process';
+import fs, { readFileSync } from 'fs';
 import * as path from 'path';
 
 const currentDir: string = __dirname;

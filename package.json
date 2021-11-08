@@ -15,8 +15,9 @@
   "scripts": {
     "build": "rm -rf dist && tsc -p . --skipLibCheck && yarn copy-assets",
     "copy-assets": "cp -r template dist/template/",
-    "lint": "node_modules/.bin/eslint \\\"src/**/*.ts\\\" \\\"./index.ts\\\" \\\"__tests__/**/*.ts\\\"",
+    "lint": "node_modules/.bin/eslint \"src/**/*.ts\" \"./index.ts\" \"__tests__/**/*.ts\"",
     "prepublishOnly": "yarn build",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\" \"__tests__/**/*.{ts,tsx,js,jsx}\" ",
     "start": "node_modules/.bin/ts-node --transpile-only index.ts",
     "test": "NODE_ENV=test jest --runInBand --forceExit"
   },
