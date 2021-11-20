@@ -1,3 +1,38 @@
+import { AxiosResponse, AxiosRequestConfig } from 'axios';
+
+/**
+ * OpenAPI parameters "in"
+ */
+export declare enum ParamType {
+    Query = "query",
+    Header = "header",
+    Path = "path",
+    Cookie = "cookie"
+}
+/**
+ * Operation method spec
+ */
+export declare type ImplicitParamValue = string | number;
+export interface ExplicitParamValue {
+    value: string | number;
+    name: string;
+    in?: ParamType | string;
+}
+export interface UnknownParamsObject {
+    [parameter: string]: ImplicitParamValue | ImplicitParamValue[];
+}
+export declare type ParamsArray = ExplicitParamValue[];
+export declare type SingleParam = ImplicitParamValue;
+export declare type Parameters<ParamsObject = UnknownParamsObject> = ParamsObject | ParamsArray | SingleParam;
+export declare type RequestPayload = any;
+export declare type OperationMethodArguments = [Parameters?, RequestPayload?, AxiosRequestConfig?];
+export declare type OperationResponse<Response> = Promise<AxiosResponse<Response>>;
+export declare type UnknownOperationMethod = (parameters?: Parameters, data?: RequestPayload, config?: AxiosRequestConfig) => OperationResponse<any>;
+export interface UnknownOperationMethods {
+    [operationId: string]: UnknownOperationMethod;
+}
+
+{@dst_client_typings@}
 {@client_typings@}
 
 // Declaring window for frontend, since we will be accessing it from Window

@@ -19,7 +19,8 @@
     "prepublishOnly": "yarn build",
     "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\" \"__tests__/**/*.{ts,tsx,js,jsx}\" ",
     "start": "node_modules/.bin/ts-node --transpile-only index.ts",
-    "test": "NODE_ENV=test jest --runInBand --forceExit"
+    "test": "NODE_ENV=test jest --runInBand --forceExit",
+    "test-swagger-file": "rm -rf ./sdk-test && ts-node --transpile-only index.ts --pkg module-app-sdk --output ./sdk-test --swagger ./__tests__/fixtures/petstore-v3.json"
   },
   "lint-staged": {
     "src/**/*.{ts,json}": "prettier --write",
@@ -27,9 +28,11 @@
     "./index.ts": "prettier --write"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "camelcase": "6.2.1",
+    "dtsgenerator": "^3.13.2",
+    "lodash": "^4.17.21",
     "ncp": "^2.0.0",
-    "openapi-client-axios-typegen": "4.3.0",
     "openapi-types": "^9.3.1",
     "prompts": "2.4.2",
     "rimraf": "3.0.2",
@@ -42,6 +45,7 @@
     "@types/eslint": "8.2.0",
     "@types/eslint-plugin-prettier": "3.1.0",
     "@types/jest": "27.0.3",
+    "@types/lodash": "^4.14.177",
     "@types/ncp": "2.0.5",
     "@types/node": "16.11.9",
     "@types/prettier": "2.4.2",

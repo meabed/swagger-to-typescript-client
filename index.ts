@@ -2,15 +2,16 @@
 
 import ncp from 'ncp';
 import yargs from 'yargs';
-import {promisify} from 'util';
+import { promisify } from 'util';
 import camelCase from 'camelcase';
-import {join, resolve} from 'path';
-import {execSync} from 'child_process';
-import {generateTypesForDocument} from 'openapi-client-axios-typegen';
-import {copyFileSync, mkdirSync, readFileSync, writeFileSync} from 'fs';
-import {argvToArguments, askArguments} from './src/input';
-import {ARG_NAMES, Server, SwaggerSpec, UserArguments} from './src/types';
-import {replaceInTemplate} from './src/utils';
+import { join, resolve } from 'path';
+import { execSync } from 'child_process';
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { argvToArguments, askArguments } from './src/input';
+import { ARG_NAMES, Server, SwaggerSpec, UserArguments } from './src/types';
+import { replaceInTemplate } from './src/utils';
+import dtsgenerator, { parseFileContent, parseSchema } from 'dtsgenerator';
+import { generateOperationMethodTypings } from './src/typegen';
 
 type NCP = (source: string, destination: string, options?: ncp.Options) => Promise<void>;
 const ncpPromisify: NCP = promisify(ncp);
@@ -98,7 +99,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   //////////////////////////////////////////
 
   // Create the directory for sdk
-  mkdirSync(outputPathSrc, {recursive: true});
+  mkdirSync(outputPathSrc, { recursive: true });
   console.info('✔ Created output path');
 
   // @todo change to node copy
@@ -109,18 +110,24 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   /////////////////////////////////////////////////////////////////////////
   const typingTemplate: string = readFileSync(sdkTypesTemplatePath).toString('utf8');
   // replace params as first function param with body and move it the end because we will use all API's as POST unless its needed to be get
-  const clientTypingStringReplaced: string = (
-    await generateTypesForDocument(swaggerPath, {
-      transformOperationName: function (operation) {
-        return operation;
-      },
-    })
-  )
-    .join('')
+  const swaggerContent = readFileSync(swaggerPath).toString('utf8');
+  const swaggerFileParsed = parseFileContent(swaggerContent, swaggerPath);
+  const dstContent: string = await dtsgenerator({
+    contents: [parseSchema(swaggerFileParsed)],
+    config: {},
+  });
+  console.log({ swaggerFileParsed });
+
+  const dstTyping = generateOperationMethodTypings(swaggerFileParsed, {});
+
+  const clientTypingStringReplaced: string = dstContent
+    // .join('')
     // .replace(/parameters\?: Parameters<UnknownParamsObject>,/gi, '')
     // .replace(/config\?: AxiosRequestConfig/gi, 'config?: AxiosRequestConfig, parameters?: Parameters<UnknownParamsObject>')
     .replace(/\.Responses\.(\d+)/gi, '.Responses.$$$1');
+
   const typingCode: string = replaceInTemplate(typingTemplate, {
+    '{@dst_client_typings@}': dstTyping,
     '{@client_typings@}': clientTypingStringReplaced,
     '{@project_name_underscored@}': underscoredProjectName.toLowerCase(),
   });
@@ -169,7 +176,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   let prod_server: string = '';
   let prod_path: string = '';
   serversObj.forEach((server: Server): void => {
-    const {pathname, host, protocol} = new URL(server.url);
+    const { pathname, host, protocol } = new URL(server.url);
     const urlLink: string = `${protocol}//${host}`;
     switch (server.description) {
       case 'local_server':
@@ -230,7 +237,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   // Update package.json with correct version and name
   /////////////////////////////////////////////////////////////////////////
   const outputPackageJsonPath: string = join(outputPath, 'package.json');
-  const outputPackageJson: any = JSON.parse(readFileSync(outputPackageJsonPath, {encoding: 'utf8'}));
+  const outputPackageJson: any = JSON.parse(readFileSync(outputPackageJsonPath, { encoding: 'utf8' }));
 
   outputPackageJson.name = publishPkgName;
   outputPackageJson.version = initialVersion || swaggerObj?.info?.version || '0.0.1';
