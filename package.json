@@ -56,7 +56,7 @@
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
-    "jest": "27.3.1",
+    "jest": "27.4.0",
     "lint-staged": "12.1.2",
     "prettier": "2.5.0",
     "swagger-schema-official": "2.0.0-bab6bed",
