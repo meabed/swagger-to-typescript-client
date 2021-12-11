@@ -30,8 +30,6 @@ jobs:
           fetch-depth: 30
           persist-credentials: false
 
-      - uses: bahmutov/npm-install@v1
-
       - name: Yarn install
         uses: bahmutov/npm-install@v1
         with:

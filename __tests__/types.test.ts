@@ -1,6 +1,6 @@
 import { generateTypesForDocument } from 'openapi-client-axios-typegen';
 import { resolve } from 'path';
-import { exit } from 'yargs';
+
 const swaggerPath: string = resolve(`${__dirname}/fixtures/swagger-1.json`);
 
 describe('generate typings', (): void => {
