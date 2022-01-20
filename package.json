@@ -39,7 +39,7 @@
     "yargs": "17.3.1"
   },
   "devDependencies": {
-    "@types/eslint": "8.2.2",
+    "@types/eslint": "8.4.0",
     "@types/eslint-plugin-prettier": "3.1.0",
     "@types/jest": "27.4.0",
     "@types/ncp": "2.0.5",
@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
     "jest": "27.4.7",
-    "lint-staged": "12.2.0",
+    "lint-staged": "12.2.1",
     "prettier": "2.5.1",
     "swagger-schema-official": "2.0.0-bab6bed",
     "ts-jest": "next"
