@@ -1,7 +1,21 @@
 {
   "name": "swagger-to-typescript-client",
   "version": "2.1.2",
-  "license": "UNLICENSED",
+  "private": false,
+  "description": "Generate TypeScript axios client from Swagger & OpenAPI specification",
+  "keywords": [
+    "Swagger",
+    "OpenAPI",
+    "OpenAPI 3",
+    "OpenAPI-To-TypeScript",
+    "Swagger-To-TypeScript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meabed/swagger-to-typescript-client"
+  },
+  "license": "MIT",
+  "author": "Mohamed Meabed <mo@meabed.com> (https://meabed.com)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {

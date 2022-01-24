@@ -1,5 +1,10 @@
 # swagger-to-ts-client
-Generate typescript axios client from swagger file
+[![Build Status](https://github.com/meabed/swagger-to-typescript-client/actions/workflows/ci.yml/badge.svg)](https://github.com/meabed/swagger-to-typescript-client/actions/workflows/ci.yml)
+[![NPM version](https://img.shields.io/npm/v/swagger-to-typescript-client.svg)](https://www.npmjs.com/package/swagger-to-typescript-client)
+[![Downloads](https://img.shields.io/npm/dm/swagger-to-typescript-client.svg)](https://www.npmjs.com/package/swagger-to-typescript-client)
+
+
+### A CLI to Generate typescript axios client from swagger & openapi file
 
 ## Installation
 NPM 
