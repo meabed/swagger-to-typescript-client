@@ -43,7 +43,7 @@
   "dependencies": {
     "camelcase": "6.3.0",
     "ncp": "^2.0.0",
-    "openapi-client-axios-typegen": "4.4.9",
+    "openapi-client-axios-typegen": "5.0.1",
     "openapi-types": "^10.0.0",
     "prompts": "2.4.2",
     "rimraf": "3.0.2",
