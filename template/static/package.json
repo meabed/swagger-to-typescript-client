@@ -13,7 +13,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "17.0.22",
+    "@types/node": "17.0.23",
     "dtsgenerator": "3.15.1",
     "openapi-client-axios": "5.1.2",
     "typescript": "4.6.3"
