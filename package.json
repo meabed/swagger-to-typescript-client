@@ -72,7 +72,7 @@
     "husky": "7.0.4",
     "jest": "27.5.1",
     "lint-staged": "12.3.7",
-    "prettier": "2.6.1",
+    "prettier": "2.6.2",
     "swagger-schema-official": "2.0.0-bab6bed",
     "ts-jest": "next"
   }
