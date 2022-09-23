@@ -860,10 +860,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@17.0.23":
+"@types/node@*":
   version "17.0.23"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
   integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
+
+"@types/node@18.7.18":
+  version "18.7.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.18.tgz#633184f55c322e4fb08612307c274ee6d5ed3154"
+  integrity sha512-m+6nTEOadJZuTPkKR/SYK3A2d7FZrgElol9UP1Kae90VVU4a6mxnPuLiIW1m4Cq4gZ/nWb9GrdVXJCoCazDAbg==
 
 "@types/prettier@2.7.0":
   version "2.7.0"
@@ -3194,10 +3199,10 @@ openapi-types@^10.0.0:
   resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-10.0.0.tgz#0debbf663b2feed0322030b5b7c9080804076934"
   integrity sha512-Y8xOCT2eiKGYDzMW9R4x5cmfc3vGaaI4EL2pwhDmodWw1HlK18YcZ4uJxc7Rdp7/gGzAygzH9SXr6GKYIXbRcQ==
 
-openapi-types@^12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-12.0.0.tgz#458a99d048f9eae1c067e15d56a8bfb3726041f1"
-  integrity sha512-6Wd9k8nmGQHgCbehZCP6wwWcfXcvinhybUTBatuhjRsCxUIujuYFZc9QnGeae75CyHASewBtxs0HX/qwREReUw==
+openapi-types@^12.0.2:
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-12.0.2.tgz#b752ab0a463c594fd7e3142e0e5983a9645503f6"
+  integrity sha512-GuTo7FyZjOIWVhIhQSWJVaws6A82sWIGyQogxxYBYKZ0NBdyP2CYSIgOwFfSB+UVoPExk/YzFpyYitHS8KVZtA==
 
 optionator@^0.9.1:
   version "0.9.1"
