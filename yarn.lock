@@ -824,10 +824,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@29.1.2":
-  version "29.1.2"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.1.2.tgz#7ad8077043ab5f6c108c8111bcc1d224e5600a87"
-  integrity sha512-y+nlX0h87U0R+wsGn6EBuoRWYyv3KFtwRNP3QWp9+k2tJ2/bqcGS3UxD7jgT+tiwJWWq3UsyV4Y+T6rsMT4XMg==
+"@types/jest@29.2.0":
+  version "29.2.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.2.0.tgz#fa98e08b46ab119f1a74a9552c48c589f5378a96"
+  integrity sha512-KO7bPV21d65PKwv3LLsD8Jn3E05pjNjRZvkm+YTacWhVmykAb07wW6IkZUmQAltwQafNcDUEUrMO2h3jeBSisg==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -3190,25 +3190,25 @@ onetime@^6.0.0:
   dependencies:
     mimic-fn "^4.0.0"
 
-openapi-client-axios-typegen@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-5.3.0.tgz#8a151fd9dd859f0862b1c2df16d6e2a283d7fe6a"
-  integrity sha512-doCmskeDQkYMNEgarbhK1LG8VL4fOkV4/D9kfQd0TdqtBtSUnkguamUHDE6Hz8l/gj8Jtikl7QJWop2QBh0eeA==
+openapi-client-axios-typegen@5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-5.3.1.tgz#9b23750ee032810f4f9a300ed71ec3350aa7f580"
+  integrity sha512-yY27Sw9+m8URD/Ps2UmMOtmmkmF7Xu2CITQGAh5VwQOcT9Ir1GOW+yMF23ApsIunsQePLa0E7DZvY8sYEMTGIw==
   dependencies:
     "@anttiviljami/dtsgenerator" "^3.12.2"
     "@apidevtools/json-schema-ref-parser" "^9.0.9"
     axios "^0.25.0"
     indent-string "^4.0.0"
     lodash "^4.17.21"
-    openapi-client-axios "^5.3.0"
+    openapi-client-axios "^5.3.1"
     openapi-types "^10.0.0"
     swagger-parser "^10.0.2"
     yargs "^17.3.0"
 
-openapi-client-axios@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-5.3.0.tgz#79d5e42ac4f50652d073a8303a1d8bc5dfad4312"
-  integrity sha512-8DaXw/Lms0EUE0MUW8c4G4EjBnbyAoGSgjqaorSBpkleZB26+h3XDqZWvsHaL0oohAe0f7yLhXd96iVFu+6MzA==
+openapi-client-axios@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-5.3.1.tgz#5234efbb6983aa946ad7710dd02b4f5f174a9805"
+  integrity sha512-mQl3P1r58Hl+JKLFy7/L4ImibtajdfxOd/LC7Tr7hYL0icBTBLfF6AktcqO8hl4iNRiIavsDaxyNiQq2zqILGA==
   dependencies:
     "@apidevtools/json-schema-ref-parser" "^9.0.7"
     bath-es5 "^3.0.3"
