@@ -53,9 +53,9 @@
     "yargs": "17.6.2"
   },
   "devDependencies": {
-    "@types/eslint": "8.4.9",
+    "@types/eslint": "8.4.10",
     "@types/eslint-plugin-prettier": "3.1.0",
-    "@types/jest": "29.2.1",
+    "@types/jest": "29.2.2",
     "@types/ncp": "2.0.5",
     "@types/node": "18.11.9",
     "@types/prettier": "2.7.1",
