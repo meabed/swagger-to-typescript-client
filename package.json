@@ -62,7 +62,7 @@
     "@types/prompts": "2.4.2",
     "@types/rimraf": "3.0.2",
     "@types/swagger-schema-official": "2.0.22",
-    "@types/yargs": "17.0.15",
+    "@types/yargs": "17.0.16",
     "@typescript-eslint/eslint-plugin": "5.45.1",
     "@typescript-eslint/parser": "5.45.1",
     "eslint": "8.29.0",
