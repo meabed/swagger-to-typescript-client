@@ -41,7 +41,7 @@
     "./index.ts": "prettier --write"
   },
   "dependencies": {
-    "camelcase": "7.0.0",
+    "camelcase": "7.0.1",
     "ncp": "^2.0.0",
     "openapi-client-axios-typegen": "6.0.0",
     "openapi-types": "^12.0.2",
