@@ -1,5 +1,12 @@
 # Change Log
 
+## v2.1.8
+- Update axios headers to include `Accept-Encoding: *` to allow gzip compression on the server side only
+
+## v2.1.7
+- Update release config
+- Update axios version
+
 ## v2.1.6
 - Update release config
 - Update axios options
