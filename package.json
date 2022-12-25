@@ -1,6 +1,6 @@
 {
   "name": "swagger-to-typescript-client",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "private": false,
   "description": "Generate TypeScript axios client from Swagger & OpenAPI specification",
   "keywords": [
