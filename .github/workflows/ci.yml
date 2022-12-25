@@ -48,7 +48,10 @@ jobs:
         run: |
           yarn build
 
-      - name: Release
+      - name: Semantic Release
         run: |
           npx i -g semantic-release @semantic-release/git @semantic-release/github
-          npx semantic-release --no-ci --debug
+
+      - name: Release
+        run: |
+          semantic-release --no-ci --debug
