@@ -16,7 +16,10 @@ module.exports = {
     // https://github.com/semantic-release/npm
     ['@semantic-release/npm'],
     // https://github.com/semantic-release/github
-    ['@semantic-release/github'],
+    ['@semantic-release/github', {
+      "successComment": false,
+      "failComment": false,
+    }],
     // https://github.com/semantic-release/git
     ['@semantic-release/git', {
       assets: [
