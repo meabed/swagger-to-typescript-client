@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 import yargs from 'yargs';
-import {join, resolve} from 'path';
-import {execSync} from 'child_process';
-import {generateTypesForDocument} from 'openapi-client-axios-typegen';
-import {copyFileSync, mkdirSync, readFileSync, writeFileSync} from 'fs';
-import {argvToArguments, askArguments} from './src/input';
-import {ARG_NAMES, Server, SwaggerSpec, UserArguments} from './src/types';
-import {replaceInTemplate} from './src/utils';
+import { join, resolve } from 'path';
+import { execSync } from 'child_process';
+import { generateTypesForDocument } from 'openapi-client-axios-typegen';
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { argvToArguments, askArguments } from './src/input';
+import { ARG_NAMES, Server, SwaggerSpec, UserArguments } from './src/types';
+import { replaceInTemplate } from './src/utils';
 
 function camelCase(str: string) {
   return str.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
@@ -96,7 +96,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   //////////////////////////////////////////
 
   // Create the directory for sdk
-  mkdirSync(outputPathSrc, {recursive: true});
+  mkdirSync(outputPathSrc, { recursive: true });
   console.info('✔ Created output path');
 
   // @todo change to node copy
@@ -167,7 +167,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   let prod_server: string = '';
   let prod_path: string = '';
   serversObj.forEach((server: Server): void => {
-    const {pathname, host, protocol} = new URL(server.url);
+    const { pathname, host, protocol } = new URL(server.url);
     const urlLink: string = `${protocol}//${host}`;
     switch (server.description) {
       case 'local_server':
@@ -228,7 +228,7 @@ const isInteractive: boolean = argv[ARG_NAMES.INTERACTIVE];
   // Update package.json with correct version and name
   /////////////////////////////////////////////////////////////////////////
   const outputPackageJsonPath: string = join(outputPath, 'package.json');
-  const outputPackageJson: any = JSON.parse(readFileSync(outputPackageJsonPath, {encoding: 'utf8'}));
+  const outputPackageJson: any = JSON.parse(readFileSync(outputPackageJsonPath, { encoding: 'utf8' }));
 
   outputPackageJson.name = publishPkgName;
   outputPackageJson.version = initialVersion || swaggerObj?.info?.version || '0.0.1';
