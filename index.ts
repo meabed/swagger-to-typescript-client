@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
-import ncp from 'ncp';
 import yargs from 'yargs';
-import {promisify} from 'util';
 import {join, resolve} from 'path';
 import {execSync} from 'child_process';
 import {generateTypesForDocument} from 'openapi-client-axios-typegen';
@@ -14,9 +12,6 @@ import {replaceInTemplate} from './src/utils';
 function camelCase(str: string) {
   return str.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 }
-
-type NCP = (source: string, destination: string, options?: ncp.Options) => Promise<void>;
-const ncpPromisify: NCP = promisify(ncp);
 
 process
   .on('unhandledRejection', (reason: Error | any, promise: Promise<any>): void => {
