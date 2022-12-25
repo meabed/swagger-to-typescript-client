@@ -78,12 +78,12 @@ function {@project_name_camel@}ClientRaw(defaultConfig?: IHttpClientConfig): { a
     }
   }
 
-  const headers = {
+  const headers: Record<string, string> = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
   };
 
-  if( typeof window === 'undefined' ) {
+  if (typeof window === 'undefined') {
     headers['Accept-Encoding'] = '*';
   }
 
