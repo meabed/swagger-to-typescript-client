@@ -15,7 +15,11 @@
     "url": "https://github.com/meabed/swagger-to-typescript-client"
   },
   "license": "MIT",
-  "author": "Mohamed Meabed <mo@meabed.com> (https://meabed.com)",
+  "author": {
+    "name": "Mohamed Meabed",
+    "email": "mo@meabed.com",
+    "url": "https://meabed.com"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
