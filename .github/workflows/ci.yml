@@ -12,11 +12,14 @@ on:
       - '*'
 
 env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GIT_BRANCH: ${{ github.ref }}
   CI: true
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     timeout-minutes: 20
 
     steps:
@@ -30,11 +33,19 @@ jobs:
           fetch-depth: 30
           persist-credentials: false
 
+      - uses: FranzDiebold/github-env-vars-action@v2
+
       - name: Yarn install
-        uses: bahmutov/npm-install@v1
-        with:
-          install-command: yarn --frozen-lockfile --silent
+        run: yarn install --frozen-lockfile
 
       - name: Test
         run: |
           yarn test
+
+      - name: Build
+        run: |
+          yarn build
+
+      - name: Release
+        run: |
+          npx semantic-release --no-ci --debug --dry-run

@@ -3,7 +3,6 @@
 import ncp from 'ncp';
 import yargs from 'yargs';
 import {promisify} from 'util';
-import camelCase from 'camelcase';
 import {join, resolve} from 'path';
 import {execSync} from 'child_process';
 import {generateTypesForDocument} from 'openapi-client-axios-typegen';
@@ -11,6 +10,10 @@ import {copyFileSync, mkdirSync, readFileSync, writeFileSync} from 'fs';
 import {argvToArguments, askArguments} from './src/input';
 import {ARG_NAMES, Server, SwaggerSpec, UserArguments} from './src/types';
 import {replaceInTemplate} from './src/utils';
+
+function camelCase(str: string) {
+  return str.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+}
 
 type NCP = (source: string, destination: string, options?: ncp.Options) => Promise<void>;
 const ncpPromisify: NCP = promisify(ncp);
