@@ -78,15 +78,19 @@ function {@project_name_camel@}ClientRaw(defaultConfig?: IHttpClientConfig): { a
     }
   }
 
+  const headers = {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  };
+
+  if( typeof window === 'undefined' ) {
+    headers['Accept-Encoding'] = '*';
+  }
 
   const axiosClient: AxiosInstance = axios.create({
     baseURL: `${autoBaseHost}${autoPathPrefix}`,
     timeout: 50000,
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      'Accept-Encoding': '*',
-    },
+    headers,
     withCredentials: true,
     ...defaultConfig
   });
