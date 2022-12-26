@@ -6,5 +6,5 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: false,
   coverageReporters: ['json', 'html'],
-  modulePathIgnorePatterns: ['<rootDir>/prod_node_modules'],
+  modulePathIgnorePatterns: ['<rootDir>/node_modules'],
 };
