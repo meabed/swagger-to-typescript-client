@@ -20,6 +20,13 @@
     "email": "mo@meabed.com",
     "url": "https://meabed.com"
   },
+  "maintainers": [
+    {
+      "name": "Mohamed Meabed",
+      "email": "mo@meabed.com",
+      "url": "https://meabed.com"
+    }
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -49,17 +56,13 @@
     "openapi-client-axios-typegen": "6.0.0",
     "openapi-types": "^12.1.0",
     "prompts": "2.4.2",
-    "rimraf": "3.0.2",
     "swagger-parser": "10.0.3",
     "yargs": "17.6.2"
   },
   "devDependencies": {
-    "@types/eslint": "8.4.10",
     "@types/jest": "29.2.4",
-    "@types/ncp": "2.0.5",
     "@types/node": "18.11.17",
     "@types/prompts": "2.4.2",
-    "@types/rimraf": "3.0.2",
     "@types/swagger-schema-official": "2.0.22",
     "@types/yargs": "17.0.17",
     "@typescript-eslint/eslint-plugin": "5.47.0",
