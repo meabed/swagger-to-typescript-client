@@ -5,15 +5,13 @@ on:
   push:
     paths:
       - 'src/**'
-      - 'test/**'
-      - 'typings/**'
-      - 'template/**'
+      - '__tests__/**'
       - 'package.json'
       - 'yarn.lock'
-      - 'index.ts'
       - 'release.config.js'
     branches:
       - '*'
+      - '**'
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -45,7 +43,10 @@ jobs:
         run: |
           yarn test
 
-      - name: Release
+      - name: Release Prep
         run: |
-          npm i -g semantic-release @semantic-release/git @semantic-release/github
+          npm i -g semantic-release @semantic-release/git @semantic-release/github conventional-changelog-conventionalcommits
+
+      - name: Release Run
+        run: |
           npx semantic-release --no-ci --debug
