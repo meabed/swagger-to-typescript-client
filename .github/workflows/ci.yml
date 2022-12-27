@@ -6,6 +6,8 @@ on:
     paths:
       - 'src/**'
       - '__tests__/**'
+      - 'template/**'
+      - 'index.ts'
       - 'package.json'
       - 'yarn.lock'
       - 'release.config.js'
