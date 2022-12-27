@@ -1,20 +1,15 @@
-name: CI
+name: Release
 on:
   workflow_dispatch:
   workflow_call:
   push:
     paths:
       - 'src/**'
-      - '__tests__/**'
       - 'template/**'
       - 'index.ts'
-      - 'package.json'
       - 'yarn.lock'
-      - 'release.config.js'
     branches:
-      - '*'
-      - '**'
-      - '!master'
+      - 'master'
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -22,7 +17,7 @@ env:
   CI: true
 
 jobs:
-  CI:
+  Release:
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -30,7 +25,7 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - uses: styfle/cancel-workflow-action@0.11.0
         with:
-          workflow_id: ci.yml
+          workflow_id: release.yml
           access_token: ${{ github.token }}
 
       - uses: actions/checkout@v3
