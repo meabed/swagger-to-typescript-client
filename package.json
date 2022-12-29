@@ -52,7 +52,7 @@
     "./index.ts": "prettier --write"
   },
   "dependencies": {
-    "axios": "1.2.1",
+    "axios": "1.2.2",
     "openapi-client-axios-typegen": "6.0.0",
     "openapi-types": "^12.1.0",
     "prompts": "2.4.2",
