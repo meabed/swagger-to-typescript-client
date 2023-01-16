@@ -11,6 +11,7 @@ on:
       - 'package.json'
       - 'yarn.lock'
       - 'release.config.js'
+      - '.github/workflows/ci.yml'
     branches:
       - '*'
       - '**'
@@ -25,6 +26,10 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+
+    permissions:
+      packages: write
+      contents: write
 
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
