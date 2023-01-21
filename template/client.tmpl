@@ -1,7 +1,7 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+import axios, { AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import { OperationMethods } from './types';
 type GenKvType =  { [key: string]: string };
-interface IHttpClientConfig extends AxiosRequestConfig {
+interface IHttpClientConfig extends RawAxiosRequestConfig {
   apiEnv?: 'local' | 'dev' | 'prod' | 'stage'
   apiBaseHost?: GenKvType
   apiPathPrefix?: GenKvType
