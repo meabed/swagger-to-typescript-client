@@ -1,5 +1,11 @@
 # Change Log
 
+## v2.1.10
+- Update client config to extend to `RawAxiosRequestConfig` instead of `AxiosRequestConfig`
+
+## v2.1.9
+- Update Axios to 1.2.3
+
 ## v2.1.8
 - Update axios headers to include `Accept-Encoding: *` to allow gzip compression on the server side only
 
