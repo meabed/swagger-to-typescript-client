@@ -52,7 +52,7 @@
     "./index.ts": "prettier --write"
   },
   "dependencies": {
-    "axios": "1.2.4",
+    "axios": "1.2.5",
     "openapi-client-axios-typegen": "6.1.4",
     "openapi-types": "^12.1.0",
     "prompts": "2.4.2",
@@ -72,7 +72,7 @@
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-prettier": "4.2.1",
     "husky": "8.0.3",
-    "jest": "29.4.0",
+    "jest": "29.4.1",
     "lint-staged": "13.1.0",
     "prettier": "2.8.3",
     "swagger-schema-official": "2.0.0-bab6bed",
