@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@types/jest": "29.4.0",
-    "@types/node": "18.14.0",
+    "@types/node": "18.14.1",
     "@types/prompts": "2.4.2",
     "@types/swagger-schema-official": "2.0.22",
     "@types/yargs": "17.0.22",
