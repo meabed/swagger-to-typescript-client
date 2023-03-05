@@ -3306,10 +3306,10 @@ onetime@^6.0.0:
   dependencies:
     mimic-fn "^4.0.0"
 
-openapi-client-axios-typegen@7.1.2:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.1.2.tgz#22ebddbd56c96d3e35b45c0b9b867beb017a4e5b"
-  integrity sha512-Pr1SoZQ2RqTI2kHfSIa1bDEJ8Jyqof+GEicDllyMuNG8kO5c27vfOLYq+2D2YwYqsirR0Y3t8bwGLpoTPJRF7w==
+openapi-client-axios-typegen@7.1.3:
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.1.3.tgz#190851f34233dc9061f8c379a989eb0cff5e8d19"
+  integrity sha512-Dkvm1+eDQRvWfHdH/YZ8WMq4yH3IC3IwjnuYUEUMc6h5QwvmFVKmnHOx531Zg6MlU5Vz7oXXP/eIkmeCt3YmyA==
   dependencies:
     "@anttiviljami/dtsgenerator" "^3.12.2"
     "@apidevtools/json-schema-ref-parser" "^9.0.9"
