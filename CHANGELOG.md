@@ -1,5 +1,9 @@
 # Change Log
 
+## v2.1.11
+- Update Axios to 1.2.4
+- Update client config to extend to `AxiosRequestConfig` instead of `RawAxiosRequestConfig`
+
 ## v2.1.10
 - Update client config to extend to `RawAxiosRequestConfig` instead of `AxiosRequestConfig`
 
