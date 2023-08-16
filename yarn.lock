@@ -1232,19 +1232,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@1.4.0:
+axios@1.4.0, axios@>=0.25.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
   integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
-  dependencies:
-    follow-redirects "^1.15.0"
-    form-data "^4.0.0"
-    proxy-from-env "^1.1.0"
-
-"axios@^0.25.0 || ^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.1.3.tgz#8274250dada2edf53814ed7db644b9c2866c1e35"
-  integrity sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -3609,24 +3600,24 @@ open@^9.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^2.2.0"
 
-openapi-client-axios-typegen@7.3.2:
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.3.2.tgz#64bf82569910190f925262dc45c937ecb593db54"
-  integrity sha512-lmmTbkdn3mnkwfkCUR+YVmrVNDwOBe1nihCaazBPHgQqgXuHD1/GjUiQauEqkUC9KQur6ZyE9iT8W4cJcOqxVA==
+openapi-client-axios-typegen@7.3.3:
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.3.3.tgz#03a922bd33e7413739f368afbbf97c1746393a5a"
+  integrity sha512-vNHuvDfBEj+/d9kLI2BQfydGJraW2opVUAiZx0uNo3y4C0C30d/VhTdSdVVxl26C5CaVrMPPy3vyZOZYGsGPSg==
   dependencies:
     "@anttiviljami/dtsgenerator" "^3.12.2"
     "@apidevtools/json-schema-ref-parser" "^10.1.0"
-    axios "^0.25.0 || ^1.1.3"
+    axios ">=0.25.0"
     indent-string "^4.0.0"
     lodash "^4.17.21"
-    openapi-client-axios "^7.3.2"
+    openapi-client-axios "^7.3.3"
     openapi-types "^12.1.0"
     yargs "^17.3.0"
 
-openapi-client-axios@^7.3.2:
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.3.2.tgz#b4f765ac40e6815fb4cc7e3b7b8c0f6f2fa8fea4"
-  integrity sha512-D2znB2UYKkQ5zhijEV6N1OFVxU8quAavTQnlq3q543UhEDplnw0k7TfCKvDzY8kSTR/nCdW3YCYE2hqJfV9Shw==
+openapi-client-axios@^7.3.3:
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.3.3.tgz#1e4b3d0d0ca2f4bcc46daf0c233bc86c8868a86c"
+  integrity sha512-4ZvdCyrbLZzMvggLDQdBJjUEgRMQDrVNeg+G5sFi8pY8jM4GH7mv2YloXsFX8dY7zwoHEW8zclhONR8pbtBQoA==
   dependencies:
     bath-es5 "^3.0.3"
     dereference-json-schema "^0.2.1"
