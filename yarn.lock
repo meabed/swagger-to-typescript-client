@@ -3631,24 +3631,24 @@ open@^9.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^2.2.0"
 
-openapi-client-axios-typegen@7.3.3:
-  version "7.3.3"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.3.3.tgz#03a922bd33e7413739f368afbbf97c1746393a5a"
-  integrity sha512-vNHuvDfBEj+/d9kLI2BQfydGJraW2opVUAiZx0uNo3y4C0C30d/VhTdSdVVxl26C5CaVrMPPy3vyZOZYGsGPSg==
+openapi-client-axios-typegen@7.3.4:
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.3.4.tgz#1448c7fcba5c4db2d8970d484da93e2697e99bf8"
+  integrity sha512-UPahsEh8rlH8FdLSgG5ko0fjQKgoEhRbdd5ZAdH6B/yChAL8/ryENk4nHd5MivDiFZwEH93ct7yuZba4rsyqHQ==
   dependencies:
     "@anttiviljami/dtsgenerator" "^3.12.2"
     "@apidevtools/json-schema-ref-parser" "^10.1.0"
     axios ">=0.25.0"
     indent-string "^4.0.0"
     lodash "^4.17.21"
-    openapi-client-axios "^7.3.3"
+    openapi-client-axios "^7.3.4"
     openapi-types "^12.1.0"
     yargs "^17.3.0"
 
-openapi-client-axios@^7.3.3:
-  version "7.3.3"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.3.3.tgz#1e4b3d0d0ca2f4bcc46daf0c233bc86c8868a86c"
-  integrity sha512-4ZvdCyrbLZzMvggLDQdBJjUEgRMQDrVNeg+G5sFi8pY8jM4GH7mv2YloXsFX8dY7zwoHEW8zclhONR8pbtBQoA==
+openapi-client-axios@^7.3.4:
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.3.4.tgz#0d257fa8544ba99410ea933d1996525fce6f8bbc"
+  integrity sha512-E/4AQEquybYx+1W3sLPNp2uxNeIktxDxV8UY48AVt8JZ/eouCu6rmivSX+fvadvWr1mNKgZTQzp1pWr/soizcw==
   dependencies:
     bath-es5 "^3.0.3"
     dereference-json-schema "^0.2.1"
