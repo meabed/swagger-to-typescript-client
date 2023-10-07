@@ -64,7 +64,7 @@
     "@types/node": "20.8.3",
     "@types/prompts": "2.4.5",
     "@types/swagger-schema-official": "2.0.23",
-    "@types/yargs": "17.0.27",
+    "@types/yargs": "17.0.28",
     "@typescript-eslint/eslint-plugin": "6.7.4",
     "@typescript-eslint/parser": "6.7.4",
     "eslint": "8.51.0",
