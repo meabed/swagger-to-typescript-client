@@ -3631,33 +3631,28 @@ open@^9.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^2.2.0"
 
-openapi-client-axios-typegen@7.3.4:
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.3.4.tgz#1448c7fcba5c4db2d8970d484da93e2697e99bf8"
-  integrity sha512-UPahsEh8rlH8FdLSgG5ko0fjQKgoEhRbdd5ZAdH6B/yChAL8/ryENk4nHd5MivDiFZwEH93ct7yuZba4rsyqHQ==
+openapi-client-axios-typegen@7.3.8:
+  version "7.3.8"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.3.8.tgz#9cca74236837e790fd38b6d29d833c4ed3af9e1a"
+  integrity sha512-KrTB3/hrVbq27CC5mM9JCHESsn2MY7Da1NppZzlPGcSQ62EUcrwqxZFCH08Lp+ujIP4yMQvOkBX2sGbChMTu+g==
   dependencies:
     "@anttiviljami/dtsgenerator" "^3.12.2"
     "@apidevtools/json-schema-ref-parser" "^10.1.0"
     axios ">=0.25.0"
     indent-string "^4.0.0"
     lodash "^4.17.21"
-    openapi-client-axios "^7.3.4"
+    openapi-client-axios "^7.3.8"
     openapi-types "^12.1.0"
     yargs "^17.3.0"
 
-openapi-client-axios@^7.3.4:
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.3.4.tgz#0d257fa8544ba99410ea933d1996525fce6f8bbc"
-  integrity sha512-E/4AQEquybYx+1W3sLPNp2uxNeIktxDxV8UY48AVt8JZ/eouCu6rmivSX+fvadvWr1mNKgZTQzp1pWr/soizcw==
+openapi-client-axios@^7.3.8:
+  version "7.3.8"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.3.8.tgz#68b22f00960e8b6c35e72d98a43c2a87a49bc5d3"
+  integrity sha512-NXzPnUCe4+02KsIsRlyV9qPFm4hgdc7gaIOi4BtutYBAK/2ACyc6u2WVimIpX+YJ9FvmryitPEiHYMjE26FmaA==
   dependencies:
     bath-es5 "^3.0.3"
     dereference-json-schema "^0.2.1"
-    openapi-types "^12.0.2"
-
-openapi-types@^12.0.2:
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-12.0.2.tgz#b752ab0a463c594fd7e3142e0e5983a9645503f6"
-  integrity sha512-GuTo7FyZjOIWVhIhQSWJVaws6A82sWIGyQogxxYBYKZ0NBdyP2CYSIgOwFfSB+UVoPExk/YzFpyYitHS8KVZtA==
+    openapi-types "^12.1.3"
 
 openapi-types@^12.1.0:
   version "12.1.0"
