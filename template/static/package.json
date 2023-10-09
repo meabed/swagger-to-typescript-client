@@ -17,7 +17,7 @@
     "@types/node": "20.8.3",
     "axios": "1.5.1",
     "dtsgenerator": "3.19.1",
-    "openapi-client-axios": "7.3.8",
+    "openapi-client-axios": "7.3.11",
     "typescript": "5.2.2"
   }
 }
