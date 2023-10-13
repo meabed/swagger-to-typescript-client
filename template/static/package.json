@@ -14,7 +14,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "20.8.4",
+    "@types/node": "20.8.5",
     "axios": "1.5.1",
     "dtsgenerator": "3.19.1",
     "openapi-client-axios": "7.3.11",
