@@ -60,11 +60,11 @@
     "yargs": "17.7.2"
   },
   "devDependencies": {
-    "@types/jest": "29.5.7",
-    "@types/node": "20.8.10",
-    "@types/prompts": "2.4.7",
-    "@types/swagger-schema-official": "2.0.24",
-    "@types/yargs": "17.0.30",
+    "@types/jest": "29.5.8",
+    "@types/node": "20.9.0",
+    "@types/prompts": "2.4.8",
+    "@types/swagger-schema-official": "2.0.25",
+    "@types/yargs": "17.0.31",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.10.0",
     "eslint": "8.53.0",
