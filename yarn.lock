@@ -886,10 +886,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@29.5.8":
-  version "29.5.8"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.8.tgz#ed5c256fe2bc7c38b1915ee5ef1ff24a3427e120"
-  integrity sha512-fXEFTxMV2Co8ZF5aYFJv+YeA08RTYJfhtN5c9JSv/mFEMe+xxjufCb+PHL+bJcMs/ebPUsBu+UNTEz+ydXrR6g==
+"@types/jest@29.5.9":
+  version "29.5.9"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.9.tgz#eb997ab4a201b7504662ac9ebb84a748e17f95ab"
+  integrity sha512-zJeWhqBwVoPm83sP8h1/SVntwWTu5lZbKQGCvBjxQOyEWnKnsaomt2y7SlV4KfwlrHAHHAn00Sh4IAWaIsGOgQ==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -926,17 +926,17 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
   integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
 
-"@types/node@20.9.2":
-  version "20.9.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.2.tgz#002815c8e87fe0c9369121c78b52e800fadc0ac6"
-  integrity sha512-WHZXKFCEyIUJzAwh3NyyTHYSR35SevJ6mZ1nWwJafKtiQbqRTIKSRcw3Ma3acqgsent3RRDqeVwpHntMk+9irg==
+"@types/node@20.9.3":
+  version "20.9.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.3.tgz#e089e1634436f676ff299596c9531bd2b59fffc6"
+  integrity sha512-nk5wXLAXGBKfrhLB0cyHGbSqopS+nz0BUgZkUQqSHSSgdee0kssp1IAqlQOu333bW+gMNs2QREx7iynm19Abxw==
   dependencies:
     undici-types "~5.26.4"
 
-"@types/prompts@2.4.8":
-  version "2.4.8"
-  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.4.8.tgz#76857c7a1e2a169353422bae468cd16d24b59f56"
-  integrity sha512-fPOEzviubkEVCiLduO45h+zFHB0RZX8tFt3C783sO5cT7fUXf3EEECpD26djtYdh4Isa9Z9tasMQuZnYPtvYzw==
+"@types/prompts@2.4.9":
+  version "2.4.9"
+  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.4.9.tgz#8775a31e40ad227af511aa0d7f19a044ccbd371e"
+  integrity sha512-qTxFi6Buiu8+50/+3DGIWLHM6QuWsEKugJnnP6iv2Mc4ncxE4A/OJkjuVOA+5X0X1S/nq5VJRa8Lu+nwcvbrKA==
   dependencies:
     "@types/node" "*"
     kleur "^3.0.3"
@@ -961,10 +961,10 @@
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-21.0.0.tgz#0c60e537fa790f5f9472ed2776c2b71ec117351b"
   integrity sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==
 
-"@types/yargs@17.0.31":
-  version "17.0.31"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.31.tgz#8fd0089803fd55d8a285895a18b88cb71a99683c"
-  integrity sha512-bocYSx4DI8TmdlvxqGpVNXOgCNR1Jj0gNPhhAY+iz1rgKDAaYrAYdFYnhDV1IFuiuVc9HkOwyDcFxaTElF3/wg==
+"@types/yargs@17.0.32":
+  version "17.0.32"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.32.tgz#030774723a2f7faafebf645f4e5a48371dca6229"
+  integrity sha512-xQ67Yc/laOG5uMfX/093MRlGGCIBzZMarVa+gfNKJxWAIgykYpVGkBdbqEzGDDfCrVUj6Hiff4mTZ5BA6TmAog==
   dependencies:
     "@types/yargs-parser" "*"
 
