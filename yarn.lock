@@ -14,10 +14,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
-"@anttiviljami/dtsgenerator@^3.19.1":
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/@anttiviljami/dtsgenerator/-/dtsgenerator-3.19.1.tgz#0e84474a21fb3c2e5ebbe5c61a73e1229171954d"
-  integrity sha512-FlGAPqih3CFH9YsktVDtW26UEORjlIj8alH+MR7eNad6z9Cun7M9auRUWRcrdo1pq4ES8q6PmICrev/LyyKKKg==
+"@anttiviljami/dtsgenerator@^3.19.3":
+  version "3.19.3"
+  resolved "https://registry.yarnpkg.com/@anttiviljami/dtsgenerator/-/dtsgenerator-3.19.3.tgz#2c88f312878ea75e919f8f7f76feabc201a02ca9"
+  integrity sha512-MgmWXII75RM1DWZ6clslv6GGh8NfJy7Pe8OhVrINyfacmj8ocyoJd09DnQkCsLGBUupKiyJ9oJwxsVyLuhUhfg==
   dependencies:
     commander "^11.1.0"
     cross-fetch "^4.0.0"
@@ -3740,24 +3740,24 @@ open@^9.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^2.2.0"
 
-openapi-client-axios-typegen@7.5.1:
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.5.1.tgz#419f5fec82930c98f1f15c0b677df475f7e881cc"
-  integrity sha512-mvBaodjCZ6j/S7Id3qPhRV0F7oLQmY2GuEa4dmckhKMej6Pf4b7CiE+K1WHe5MZ7tb6sUt1dmgl8Shw0gA54Og==
+openapi-client-axios-typegen@7.5.3:
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios-typegen/-/openapi-client-axios-typegen-7.5.3.tgz#e9bf32774c1beee581b6ae5502addf2ffb670fdd"
+  integrity sha512-VNTcq9Mubs+twj8tKtzdv/gTrYkuvDj0CMKKCv6Bm08j3G8H4aMfZAUbLzZZrTo9fLQPFK4fZqVdQBLcbwK9/Q==
   dependencies:
-    "@anttiviljami/dtsgenerator" "^3.19.1"
+    "@anttiviljami/dtsgenerator" "^3.19.3"
     "@apidevtools/json-schema-ref-parser" "^10.1.0"
     axios ">=0.25.0"
     indent-string "^4.0.0"
     lodash "^4.17.21"
-    openapi-client-axios "^7.5.1"
+    openapi-client-axios "^7.5.3"
     openapi-types "^12.1.0"
     yargs "^17.3.0"
 
-openapi-client-axios@^7.5.1:
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.5.1.tgz#0444660eca92a0ed7d5a6eb7a95fc8f4697bc894"
-  integrity sha512-mtPKqgQ/+u95SZAeJRobmT2K0q4akXvRVssO/5/muFsc5qfOQqmaP+awHcM4Xu2yFoD8Uumia2zjm8OtmpKqxA==
+openapi-client-axios@^7.5.3:
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-7.5.3.tgz#74bdfe215d42158af026373b99d84e601fa29cd6"
+  integrity sha512-F31GXx3IziQlJAcNLfgta96d66rS2M+pdZ0n7wc0SwjoFi71PDLz+mEH+i42+XoSs1y2x8+wJ/jMpTpgReZd0g==
   dependencies:
     bath-es5 "^3.0.3"
     dereference-json-schema "^0.2.1"
