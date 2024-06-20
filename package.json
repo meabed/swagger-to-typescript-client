@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@types/jest": "29.5.12",
-    "@types/node": "20.14.3",
+    "@types/node": "20.14.6",
     "@types/prompts": "2.4.9",
     "@types/swagger-schema-official": "2.0.25",
     "@types/yargs": "17.0.32",
@@ -78,6 +78,6 @@
     "swagger-schema-official": "2.0.0-bab6bed",
     "ts-jest": "29.1.5",
     "ts-node": "10.9.2",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   }
 }
