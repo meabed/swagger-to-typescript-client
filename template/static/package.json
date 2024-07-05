@@ -14,10 +14,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "20.14.8",
+    "@types/node": "20.14.10",
     "axios": "1.7.2",
     "dtsgenerator": "3.19.2",
     "openapi-client-axios": "7.5.5",
-    "typescript": "5.5.2"
+    "typescript": "5.5.3"
   }
 }
