@@ -67,7 +67,7 @@
     "@types/yargs": "17.0.33",
     "@typescript-eslint/eslint-plugin": "8.32.1",
     "@typescript-eslint/parser": "8.32.1",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-prettier": "5.4.0",
@@ -76,7 +76,7 @@
     "lint-staged": "16.0.0",
     "prettier": "3.5.3",
     "swagger-schema-official": "2.0.0-bab6bed",
-    "ts-jest": "29.3.3",
+    "ts-jest": "29.3.4",
     "ts-node": "10.9.2",
     "typescript": "5.8.3"
   }
