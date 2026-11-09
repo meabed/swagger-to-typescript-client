@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/node": "24.10.1",
     "axios": "1.13.2",
-    "dtsgenerator": "3.19.2",
+    "dtsgenerator": "4.0.1",
     "openapi-client-axios": "7.8.0",
     "typescript": "5.9.3"
   }
